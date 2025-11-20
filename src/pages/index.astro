@@ -1,0 +1,210 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const processSteps = [
+  {
+    title: "The Workshop",
+    subtitle: "Discovery",
+    body:
+      "We dissect the problem, clarify stakeholders, and pick the smallest meaningful win so we know exactly what to ship first.",
+    icon: "lightbulb",
+  },
+  {
+    title: "The Blueprint",
+    subtitle: "Architecture",
+    body:
+      "We design the system, cost model, and data boundaries. You see the plan, not guesswork, before the first sprint begins.",
+    icon: "map",
+  },
+  {
+    title: "Rapid Build",
+    subtitle: "Incubation",
+    body:
+      "In 2–4 week cycles we ship working software, demo continuously, and adjust quickly based on what you learn.",
+    icon: "zap",
+  },
+  {
+    title: "Launch & Stewardship",
+    subtitle: "Delivery",
+    body:
+      "We harden, observe, and hand over with documentation—or stay on as a fractional CTO to scale the team and roadmap.",
+    icon: "rocket",
+  },
+];
+
+---
+
+<BaseLayout>
+  <header class="sticky top-0 z-30 backdrop-blur-xl bg-slate-900/70 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-full bg-white text-slate-900 font-bold flex items-center justify-center text-lg">
+          BG
+        </div>
+        <div class="leading-tight">
+          <p class="text-sm text-slate-400">Bradley Golden</p>
+          <p class="text-sm font-semibold text-slate-100">AI Platform Architect & Fractional CTO</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-200">
+        <a href="#approach" class="hover:text-cyan-200">Approach</a>
+        <a href="#contact" class="hover:text-cyan-200">Contact</a>
+        <a
+          href="#contact"
+          class="bg-white text-slate-900 px-4 py-2 rounded-lg shadow-lg shadow-indigo-500/20 hover:-translate-y-0.5 transition"
+        >
+          Let's talk
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pb-24">
+    <section class="pt-16 lg:pt-24 pb-16">
+      <div class="max-w-4xl space-y-6">
+        <div class="pill bg-white/10 text-cyan-200 inline-flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-cyan-300 animate-pulse"></span>
+          Your strategic technical partner
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight text-white">
+          Turning your vision into
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-indigo-300 to-fuchsia-300">
+            intelligent software.
+          </span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-300 max-w-2xl">
+          You don't need to speak code to build the future. I partner with leaders in specialized industries to
+          transform manual processes into scalable, AI-powered products.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#approach"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow-lg shadow-indigo-500/30 hover:-translate-y-0.5 transition"
+          >
+            See the process
+            <i data-lucide="arrow-down" class="ml-2 h-5 w-5"></i>
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10"
+          >
+            Start a project
+            <i data-lucide="sparkle" class="ml-2 h-5 w-5"></i>
+          </a>
+        </div>
+        <div class="flex flex-wrap gap-4 text-sm text-slate-300">
+          <span class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5">
+            <i data-lucide="shield-check" class="h-4 w-4 text-cyan-200"></i>
+            Designs that protect sensitive data and respect compliance needs
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5">
+            <i data-lucide="clock-3" class="h-4 w-4 text-cyan-200"></i>
+            Work in short, transparent build cycles
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5">
+            <i data-lucide="gauge" class="h-4 w-4 text-cyan-200"></i>
+            Define success upfront and make progress visible
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="py-16">
+      <div class="max-w-3xl mb-10">
+        <p class="pill bg-indigo-500/20 text-indigo-100">Process</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">From abstract idea to ship-ready product</h2>
+        <p class="text-slate-300 mt-3">
+          I act as a technical incubator for your vision. We start with a problem and end with a scalable asset,
+          following a proven 4-stage pipeline.
+        </p>
+      </div>
+      <div class="space-y-6 relative">
+        <div class="absolute left-4 top-2 bottom-2 w-[1px] bg-gradient-to-b from-indigo-400/60 via-white/10 to-transparent md:left-1/2 md:-translate-x-1/2"></div>
+        {processSteps.map((step, index) => (
+          <div class="relative">
+            <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-10">
+              <div class={`md:w-1/2 ${index % 2 === 1 ? "md:order-last md:text-left" : "md:text-right"}`}>
+                <div class="card-surface rounded-2xl p-6 md:p-7">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="h-10 w-10 rounded-full bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-100">
+                      <i data-lucide={step.icon} class="h-5 w-5"></i>
+                    </div>
+                    <p class="text-xs uppercase tracking-[0.18em] text-indigo-100">{step.subtitle}</p>
+                  </div>
+                  <h3 class="text-xl font-semibold text-white mb-2">{index + 1}. {step.title}</h3>
+                  <p class="text-slate-300 leading-relaxed">{step.body}</p>
+                </div>
+              </div>
+              <div class="hidden md:flex md:w-1/2 justify-center">
+                <div class="h-16 w-[1px] bg-white/15"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="contact" class="py-20">
+      <div class="card-surface rounded-3xl p-8 md:p-10 border border-cyan-300/20">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div class="space-y-3">
+            <p class="pill bg-cyan-500/15 text-cyan-100">Next Step</p>
+            <h2 class="text-3xl font-bold text-white">Tell me about the problem you want solved</h2>
+            <p class="text-slate-300 max-w-2xl">
+              Whether you need an AI product launched or a workflow untangled, I’ll respond with a short plan and
+              timeline so you know what working together would look like.
+            </p>
+            <div class="flex flex-wrap gap-3 text-sm text-slate-200">
+              <span class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5">
+                <i data-lucide="clock" class="h-4 w-4 text-cyan-200"></i>48-hour response
+              </span>
+              <span class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5">
+                <i data-lucide="handshake" class="h-4 w-4 text-cyan-200"></i>No sales team—talk directly with me
+              </span>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row lg:flex-col gap-3 min-w-[260px]">
+            <a
+              class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow-lg shadow-indigo-500/30 hover:-translate-y-0.5 transition"
+              href="mailto:bradley@recursivesystems.dev"
+            >
+              Email Bradley
+              <i data-lucide="send" class="h-5 w-5 ml-2"></i>
+            </a>
+            <a
+              class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10"
+              href="https://www.linkedin.com/in/goldenbradley/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Connect on LinkedIn
+              <i data-lucide="linkedin" class="h-5 w-5 ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 bg-slate-900/70">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-slate-400">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-full bg-white text-slate-900 font-bold flex items-center justify-center text-sm">
+          BG
+        </div>
+        <div>
+          <p class="text-white font-semibold">Bradley Golden</p>
+          <p>AI Platform Architect & Fractional CTO</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-cyan-200" href="mailto:bradley@recursivesystems.dev">bradley@recursivesystems.dev</a>
+        <span class="hidden md:block text-white/20">•</span>
+        <a class="hover:text-cyan-200" href="https://www.linkedin.com/in/goldenbradley/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <span class="hidden md:block text-white/20">•</span>
+        <a class="hover:text-cyan-200" href="#contact">Start a project</a>
+      </div>
+      <div class="text-slate-500 text-xs">© 2025 Recursive Systems LLC. All rights reserved.</div>
+    </div>
+  </footer>
+</BaseLayout>

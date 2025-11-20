@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Bradley Golden | AI Platform Architect & Fractional CTO",
+  description = "Partnering with leaders to turn manual workflows into resilient, intelligent software products.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  </head>
+  <body class="min-h-screen relative">
+    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+      <div class="absolute -top-24 -left-10 h-80 w-80 rounded-full bg-indigo-600/20 blur-3xl"></div>
+      <div class="absolute top-20 right-0 h-96 w-96 rounded-full bg-cyan-400/10 blur-[140px]"></div>
+      <div class="absolute bottom-10 left-1/4 h-72 w-72 rounded-full bg-purple-500/10 blur-[120px]"></div>
+    </div>
+    <div class="relative">
+      <slot />
+    </div>
+    <script>
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    </script>
+  </body>
+</html>
