@@ -1,6 +1,71 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+const services = [
+  {
+    id: "advise",
+    title: "Advise",
+    tagline: "Clarity before action",
+    icon: "compass",
+    description: "Strategic AI guidance for anyone evaluating opportunities",
+    whoFor: "Anyone exploring how AI fits into their business—founders, executives, team leads, or curious operators",
+    includes: [
+      "AI readiness assessment",
+      "Technology stack evaluation",
+      "Compliance & data privacy review",
+      "Strategic roadmap creation",
+    ],
+    outcome: "Clear action plan with prioritized opportunities—direction, not implementation.",
+    industries: "Healthcare, Finance, Manufacturing",
+  },
+  {
+    id: "train",
+    title: "Train",
+    tagline: "Learn by doing",
+    icon: "users",
+    description: "Hands-on enablement for individuals or teams to become AI-fluent",
+    whoFor: "Individuals or teams wanting to leverage AI tools effectively in their daily work",
+    includes: [
+      "Hands-on workshops (AI tools, prompt engineering)",
+      "AI thinking frameworks",
+      "Workflow integration training",
+      "Custom playbook creation",
+    ],
+    outcome: "Self-sufficient team with documented best practices and confidence.",
+  },
+  {
+    id: "build",
+    title: "Build",
+    tagline: "From concept to solution",
+    icon: "layers",
+    description: "Tangible deliverables—from roadmaps to prototypes to full solutions",
+    whoFor: "Companies ready to move from strategy to something tangible",
+    includes: [
+      "Detailed implementation roadmap",
+      "Working prototype to validate the concept",
+      "End-to-end solution delivery",
+      "Vendor evaluation & integration guidance",
+    ],
+    outcome: "A deliverable you can act on—whether that's a plan, a prototype, or a production-ready solution.",
+    linkToApproach: true,
+  },
+  {
+    id: "support",
+    title: "Support",
+    tagline: "Keep it running, make it better",
+    icon: "wrench",
+    description: "Ongoing expertise for your existing platform",
+    whoFor: "Companies with existing systems that need expert guidance or hands-on help",
+    includes: [
+      "Platform maintenance & optimization",
+      "Troubleshooting & performance tuning",
+      "Feature enhancements & integrations",
+      "Fractional CTO leadership",
+    ],
+    outcome: "A reliable partner who knows your system and keeps it evolving with your business.",
+  },
+];
+
 const processSteps = [
   {
     title: "The Workshop",
@@ -47,6 +112,7 @@ const processSteps = [
         </div>
       </div>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-200">
+        <a href="#services" class="hover:text-cyan-200">Services</a>
         <a href="#approach" class="hover:text-cyan-200">Approach</a>
         <a href="#contact" class="hover:text-cyan-200">Contact</a>
         <a
@@ -73,22 +139,22 @@ const processSteps = [
           </span>
         </h1>
         <p class="text-lg md:text-xl text-slate-300 max-w-2xl">
-          You don't need to speak code to build the future. I partner with leaders in specialized industries to
-          transform manual processes into scalable, AI-powered products.
+          You don't need to speak code to build the future. I partner with people in specialized industries to
+          advise on AI strategy, provide hands-on training, build solutions, and support existing platforms.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a
-            href="#approach"
+            href="#services"
             class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow-lg shadow-indigo-500/30 hover:-translate-y-0.5 transition"
           >
-            See the process
+            See how we can work together
             <i data-lucide="arrow-down" class="ml-2 h-5 w-5"></i>
           </a>
           <a
             href="#contact"
             class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10"
           >
-            Start a project
+            Start a conversation
             <i data-lucide="sparkle" class="ml-2 h-5 w-5"></i>
           </a>
         </div>
@@ -108,6 +174,89 @@ const processSteps = [
         </div>
       </div>
     </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-16">
+      <div class="max-w-3xl mb-10">
+        <p class="pill bg-cyan-500/20 text-cyan-100">Services</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">Four ways to work together</h2>
+        <p class="text-slate-300 mt-3">
+          Whether you need strategic clarity, team enablement, a new solution, or support for an existing platform—I adapt to where you are in your AI journey.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {services.map((service) => (
+          <a
+            href={`#${service.id}`}
+            class="card-surface rounded-2xl p-6 hover:bg-white/10 transition group"
+          >
+            <div class="flex items-start gap-4">
+              <div class="h-12 w-12 rounded-xl bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center text-cyan-100 shrink-0">
+                <i data-lucide={service.icon} class="h-6 w-6"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-white group-hover:text-cyan-200 transition">{service.title}</h3>
+                <p class="text-sm text-cyan-200/80">{service.tagline}</p>
+                <p class="text-slate-400 text-sm mt-2">{service.description}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Service Detail Sections -->
+    {services.map((service, index) => (
+      <section id={service.id} class="py-16 border-t border-white/5">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-12 w-12 rounded-xl bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-100">
+                <i data-lucide={service.icon} class="h-6 w-6"></i>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-white">{service.title}</h2>
+                <p class="text-indigo-200">{service.tagline}</p>
+              </div>
+            </div>
+            <p class="text-slate-300 mb-4">
+              <span class="text-white font-medium">Who it's for:</span> {service.whoFor}
+            </p>
+            {service.industries && (
+              <p class="text-slate-400 text-sm mb-4">
+                Industries: {service.industries}
+              </p>
+            )}
+            <p class="text-slate-300">
+              <span class="text-white font-medium">Outcome:</span> {service.outcome}
+            </p>
+            {service.linkToApproach && (
+              <p class="text-slate-400 text-sm mt-4">
+                See the <a href="#approach" class="text-cyan-200 hover:underline">4-stage process</a> I use to bring Build projects to life.
+              </p>
+            )}
+          </div>
+          <div class="card-surface rounded-2xl p-6">
+            <h3 class="text-sm uppercase tracking-wider text-slate-400 mb-4">What's included</h3>
+            <ul class="space-y-3">
+              {service.includes.map((item: string) => (
+                <li class="flex items-start gap-3 text-slate-200">
+                  <i data-lucide="check" class="h-5 w-5 text-cyan-300 shrink-0 mt-0.5"></i>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center w-full mt-6 px-5 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow-lg shadow-indigo-500/30 hover:-translate-y-0.5 transition"
+            >
+              Discuss {service.title.toLowerCase()} engagement
+              <i data-lucide="arrow-right" class="h-5 w-5 ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    ))}
 
     <section id="approach" class="py-16">
       <div class="max-w-3xl mb-10">
@@ -155,9 +304,6 @@ const processSteps = [
               timeline so you know what working together would look like.
             </p>
             <div class="flex flex-wrap gap-3 text-sm text-slate-200">
-              <span class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5">
-                <i data-lucide="clock" class="h-4 w-4 text-cyan-200"></i>48-hour response
-              </span>
               <span class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5">
                 <i data-lucide="handshake" class="h-4 w-4 text-cyan-200"></i>No sales team—talk directly with me
               </span>
