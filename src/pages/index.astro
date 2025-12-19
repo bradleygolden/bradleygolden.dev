@@ -16,7 +16,6 @@ const services = [
       "Strategic roadmap creation",
     ],
     outcome: "Clear action plan with prioritized opportunities—direction, not implementation.",
-    industries: "Healthcare, Finance, Manufacturing",
   },
   {
     id: "train",
@@ -47,53 +46,52 @@ const services = [
       "Vendor evaluation & integration guidance",
     ],
     outcome: "A deliverable you can act on—whether that's a plan, a prototype, or a production-ready solution.",
-    linkToApproach: true,
   },
   {
     id: "support",
     title: "Support",
-    tagline: "Keep it running, make it better",
+    tagline: "Ongoing technical leadership",
     icon: "wrench",
-    description: "Ongoing expertise for your existing platform",
-    whoFor: "Companies with existing systems that need expert guidance or hands-on help",
+    description: "A fractional CTO relationship for companies that need sustained guidance",
+    whoFor: "Companies that want ongoing technical leadership without a full-time hire—whether for strategy, team guidance, or hands-on help",
     includes: [
+      "Fractional CTO leadership & strategic planning",
+      "Team mentorship & technical hiring support",
       "Platform maintenance & optimization",
-      "Troubleshooting & performance tuning",
       "Feature enhancements & integrations",
-      "Fractional CTO leadership",
     ],
-    outcome: "A reliable partner who knows your system and keeps it evolving with your business.",
+    outcome: "A trusted technical partner who grows with your business and makes technology less stressful.",
   },
 ];
 
 const processSteps = [
   {
-    title: "The Workshop",
-    subtitle: "Discovery",
+    title: "Listen",
+    subtitle: "Understand",
     body:
-      "We dissect the problem, clarify stakeholders, and pick the smallest meaningful win so we know exactly what to ship first.",
+      "I start by understanding your situation—your goals, constraints, and what's actually going on. No assumptions, no jumping to solutions.",
+    icon: "ear",
+  },
+  {
+    title: "Clarify",
+    subtitle: "Make Sense",
+    body:
+      "I help you see the options clearly. Whether it's a technology decision, a training need, or a full build—you'll understand the trade-offs before we move.",
     icon: "lightbulb",
   },
   {
-    title: "The Blueprint",
-    subtitle: "Architecture",
+    title: "Act",
+    subtitle: "Do the Work",
     body:
-      "We design the system, cost model, and data boundaries. You see the plan, not guesswork, before the first sprint begins.",
-    icon: "map",
-  },
-  {
-    title: "Rapid Build",
-    subtitle: "Incubation",
-    body:
-      "In 2–4 week cycles we ship working software, demo continuously, and adjust quickly based on what you learn.",
+      "We move forward together—whether that's a strategic roadmap, hands-on training, a working prototype, or ongoing technical leadership.",
     icon: "zap",
   },
   {
-    title: "Launch & Stewardship",
-    subtitle: "Delivery",
+    title: "Adapt",
+    subtitle: "Evolve",
     body:
-      "We harden, observe, and hand over with documentation—or stay on as a fractional CTO to scale the team and roadmap.",
-    icon: "rocket",
+      "Your needs change, and so does our relationship. I stay available for follow-up questions, new challenges, or deeper partnership.",
+    icon: "refresh-cw",
   },
 ];
 
@@ -108,7 +106,7 @@ const processSteps = [
         </div>
         <div class="leading-tight">
           <p class="text-sm text-slate-400">Bradley Golden</p>
-          <p class="text-sm font-semibold text-slate-100">AI Platform Architect & Fractional CTO</p>
+          <p class="text-sm font-semibold text-slate-100">Fractional CTO & AI Platform Architect</p>
         </div>
       </div>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-200">
@@ -132,17 +130,21 @@ const processSteps = [
       <div class="max-w-4xl space-y-6">
         <div class="pill bg-white/10 text-cyan-200 inline-flex items-center gap-2">
           <span class="h-2 w-2 rounded-full bg-cyan-300 animate-pulse"></span>
-          Your strategic technical partner
+          Here to help you figure out technology
         </div>
         <h1 class="text-4xl md:text-6xl font-bold leading-tight text-white">
-          Turning your vision into
+          Helping you make
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-indigo-300 to-fuchsia-300">
-            intelligent software.
+            smart technology decisions.
           </span>
         </h1>
         <p class="text-lg md:text-xl text-slate-300 max-w-2xl">
-          You don't need to speak code to build the future. I partner with people in specialized industries to
-          advise on AI strategy, provide hands-on training, build solutions, and support existing platforms.
+          I work with companies in manufacturing, healthcare, staffing, property management, and beyond—helping
+          you navigate AI and technology decisions. Whether you need strategic clarity, hands-on help, or ongoing
+          technical leadership, I start by listening.
+        </p>
+        <p class="text-sm text-slate-400 italic">
+          Not sure what you need yet? That's exactly where I like to start.
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a
@@ -232,11 +234,6 @@ const processSteps = [
             <p class="text-slate-300">
               <span class="text-white font-medium">Outcome:</span> {service.outcome}
             </p>
-            {service.linkToApproach && (
-              <p class="text-slate-400 text-sm mt-4">
-                See the <a href="#approach" class="text-cyan-200 hover:underline">4-stage process</a> I use to bring Build projects to life.
-              </p>
-            )}
           </div>
           <div class="card-surface rounded-2xl p-6">
             <h3 class="text-sm uppercase tracking-wider text-slate-400 mb-4">What's included</h3>
@@ -252,7 +249,7 @@ const processSteps = [
               href="#contact"
               class="inline-flex items-center justify-center w-full mt-6 px-5 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow-lg shadow-indigo-500/30 hover:-translate-y-0.5 transition"
             >
-              Discuss {service.title.toLowerCase()} engagement
+              Talk about {service.title.toLowerCase()}
               <i data-lucide="arrow-right" class="h-5 w-5 ml-2"></i>
             </a>
           </div>
@@ -262,11 +259,11 @@ const processSteps = [
 
     <section id="approach" class="py-16">
       <div class="max-w-3xl mb-10">
-        <p class="pill bg-indigo-500/20 text-indigo-100">Process</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">From abstract idea to ship-ready product</h2>
+        <p class="pill bg-indigo-500/20 text-indigo-100">Approach</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mt-4">How I work</h2>
         <p class="text-slate-300 mt-3">
-          I act as a technical incubator for your vision. We start with a problem and end with a scalable asset,
-          following a proven 4-stage pipeline.
+          Whether you need advice, training, a build, or ongoing support—the approach is the same.
+          I start by listening, help you see options clearly, and stay with you as things evolve.
         </p>
       </div>
       <div class="space-y-6 relative">
@@ -300,10 +297,10 @@ const processSteps = [
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div class="space-y-3">
             <p class="pill bg-cyan-500/15 text-cyan-100">Next Step</p>
-            <h2 class="text-3xl font-bold text-white">Tell me about the problem you want solved</h2>
+            <h2 class="text-3xl font-bold text-white">Tell me what you're working on</h2>
             <p class="text-slate-300 max-w-2xl">
-              Whether you need an AI product launched or a workflow untangled, I’ll respond with a short plan and
-              timeline so you know what working together would look like.
+              Even if you're just exploring options, I'm happy to think through it with you. No pitch, no pressure—just
+              a conversation about what might help.
             </p>
             <div class="flex flex-wrap gap-3 text-sm text-slate-200">
               <span class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/5">
@@ -351,7 +348,7 @@ const processSteps = [
         </div>
         <div>
           <p class="text-white font-semibold">Bradley Golden</p>
-          <p>AI Platform Architect & Fractional CTO</p>
+          <p>Fractional CTO & AI Platform Architect</p>
         </div>
       </div>
       <div class="flex items-center gap-4">
@@ -359,7 +356,7 @@ const processSteps = [
         <span class="hidden md:block text-white/20">•</span>
         <a class="hover:text-cyan-200" href="https://www.linkedin.com/in/goldenbradley/" target="_blank" rel="noreferrer">LinkedIn</a>
         <span class="hidden md:block text-white/20">•</span>
-        <a class="hover:text-cyan-200" href="#contact">Start a project</a>
+        <a class="hover:text-cyan-200" href="#contact">Get in touch</a>
       </div>
       <div class="text-slate-500 text-xs">© 2025 Recursive Systems LLC. All rights reserved.</div>
     </div>
