@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bradley Golden</title>
+<meta name="description" content="Bradley Golden runs a growth agency for independent residential HVAC companies. Founder of Recursive Systems in Highwood, Illinois.">
+<link rel="canonical" href="https://bradleygolden.dev/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://bradleygolden.dev/">
+<meta property="og:site_name" content="Bradley Golden">
+<meta property="og:title" content="Bradley Golden">
+<meta property="og:description" content="Bradley Golden runs a growth agency for independent residential HVAC companies. Founder of Recursive Systems in Highwood, Illinois.">
+<meta property="og:image" content="https://bradleygolden.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bradley Golden">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#07051c">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://bradleygolden.dev/#person","name":"Bradley Golden","url":"https://bradleygolden.dev/","image":"https://bradleygolden.dev/bradley-800.webp","jobTitle":"Founder","description":"Bradley Golden runs a growth agency for independent residential HVAC companies. Founder of Recursive Systems in Highwood, Illinois.","worksFor":{"@type":"Organization","@id":"https://recursivesystems.dev/#organization","name":"Recursive Systems","url":"https://recursivesystems.dev/","sameAs":["https://www.youtube.com/@recursivesystems"]},"homeLocation":{"@type":"Place","name":"Highwood, Illinois"},"sameAs":["https://www.linkedin.com/in/goldenbradley/","https://www.instagram.com/bradleyatrecursive/"]}</script>
+<link rel="preload" href="funnel-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Funnel Display"; src: url(funnel-display-latin-wght-normal.woff2) format("woff2"); font-weight: 300 800; font-display: swap; }
+:root {
+  --paper: #f4f4f1;
+  --ink: #121212;
+  --soft: #4a4a47;
+  --night: #07051c;
+  --heat-ink: #ff9d45;
+  --hot: #e2420d;
+  --face: "Funnel Display", system-ui, sans-serif;
+  --gutter: clamp(20px, 4.4vw, 72px);
+  --sx: 50%;
+}
+* { box-sizing: border-box; margin: 0; }
+html { background: var(--paper); color: var(--ink); }
+body { font: 400 1rem/1.5 var(--face); }
+.stage { position: relative; isolation: isolate; }
+.layout { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto 1fr auto; padding: clamp(28px, 3vw, 48px) var(--gutter) clamp(32px, 4vw, 56px); position: relative; }
+.layout > * { position: relative; z-index: 1; }
+
+/* The name splits at the seam: first name in daylight, last name as the camera sees it. Same rule at every width. */
+.name { grid-column: 1 / -1; grid-row: 1; display: grid; grid-template-columns: 1fr 1fr; column-gap: .24em; font-weight: 760; font-size: calc((50vw - var(--gutter)) / 3.66); line-height: .82; letter-spacing: -.028em; }
+.name span:first-child { justify-self: end; }
+.portrait { position: absolute; z-index: 0; left: 50%; bottom: 0; height: min(74svh, 72vw); transform: translateX(-48.5%); }
+.portrait img { display: block; height: 100%; width: auto; }
+/* Everything to read sits in daylight, in reading order. */
+.statement { grid-column: 1; grid-row: 2; margin-top: clamp(20px, 2.4vw, 40px); max-width: calc(50vw - var(--gutter) - 15vw); font-size: clamp(1.375rem, 1.95vw, 2.125rem); line-height: 1.1; letter-spacing: -.018em; font-weight: 500; line-height: 1.14; }
+.statement span { display: block; }
+.about { grid-column: 1; grid-row: 3; align-self: start; max-width: min(40ch, calc(50vw - var(--gutter) - 17vw)); margin-top: 20px; font-size: clamp(1rem, 1.1vw, 1.0625rem); line-height: 1.5; color: var(--soft); text-wrap: pretty; }
+/* Where to go next sits in the dark corner, which stays thermal wherever the seam is. */
+.links { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; display: flex; flex-direction: column; align-items: flex-end; margin-bottom: -6px; z-index: 2; color: #fff; }
+.links .social { margin: 0 -12px 0 0; }
+.links a { color: inherit; }
+.company { display: inline-flex; align-items: center; gap: 10px; height: 48px; position: relative; color: inherit; }
+.company svg { height: 28px; width: auto; display: block; }
+.company .out { height: 15px; }
+.links .social { margin-top: 6px; }
+.social { display: flex; margin-left: -12px; list-style: none; padding: 0; }
+.social a { display: grid; place-items: center; width: 48px; height: 48px; position: relative; }
+.social img, .social svg { display: block; width: auto; }
+.li img { height: 17px; } .ig svg { height: 19px; } .yt svg { height: 20px; }
+.company::after, .social a::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 6px; height: 2px; background: var(--hot); transform: scaleX(0); transform-origin: left; transition: transform .15s ease-out; }
+.company::after { left: 0; right: 0; bottom: 8px; }
+.company:hover::after, .company:focus-visible::after, .social a:hover::after, .social a:focus-visible::after { transform: scaleX(1); }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+
+/* The thermal copy of the same page, shown right of the seam. Paper and ink read as cold; the person reads as heat. */
+.thermal { position: absolute; inset: 0; background: var(--night); color: var(--heat-ink); pointer-events: none; z-index: 1; clip-path: inset(0 0 0 var(--sx)); }
+.js .thermal { clip-path: var(--clip); }
+.scan { position: absolute; z-index: 4; top: var(--handle-y, 50%); height: 44px; margin: 0; background: none; appearance: none; -webkit-appearance: none; cursor: ew-resize; }
+.scan::-webkit-slider-runnable-track { height: 44px; background: none; }
+.scan::-moz-range-track { height: 44px; background: none; }
+.scan::-webkit-slider-thumb { -webkit-appearance: none; width: 32px; height: 32px; margin-top: 6px; border-radius: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 11l-4 5 4 5M20 11l4 5-4 5' fill='none' stroke='%23f4f4f1' stroke-width='1.8'/%3E%3C/svg%3E") center / 32px 32px no-repeat, linear-gradient(90deg, var(--ink) 50%, var(--heat-ink) 50%); }
+.scan::-moz-range-thumb { width: 32px; height: 32px; border: 0; border-radius: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 11l-4 5 4 5M20 11l4 5-4 5' fill='none' stroke='%23f4f4f1' stroke-width='1.8'/%3E%3C/svg%3E") center / 32px 32px no-repeat, linear-gradient(90deg, var(--ink) 50%, var(--heat-ink) 50%); }
+.scan:focus-visible { outline: none; }
+.scan:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--hot); }
+.scan { display: none; } .js .scan { display: block; opacity: 0; } .js .scan:focus-visible { opacity: 1; }
+.js .portrait { cursor: ew-resize; touch-action: pan-y; }
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; grid-template-rows: auto auto auto auto 1fr; padding-top: 24px; padding-bottom: 0; }
+  .portrait { position: relative; grid-row: 2; left: auto; bottom: auto; transform: none; height: 300px; margin: 12px calc(var(--gutter) * -1) 0; overflow: hidden; }
+  .portrait img { position: absolute; top: 0; left: 50%; height: 350px; transform: translateX(-48.5%); }
+  .statement, .about, .links { grid-column: 1; max-width: none; }
+  .statement { grid-row: 3; margin-top: 26px; font-size: 1.625rem; text-wrap: balance; }
+  .statement span { display: inline; }
+  .about { grid-row: 4; margin-top: 16px; align-self: start; font-size: 1.125rem; }
+  /* The page ends where it began: in the dark field, with the ways to reach him. */
+  .links { grid-column: 1; grid-row: 5; justify-self: stretch; align-self: stretch; justify-content: flex-start; align-items: flex-start; margin: 32px calc(var(--gutter) * -1) 0; padding: 22px var(--gutter) 30px; background: var(--night); color: #fff; }
+  .links .social { margin: 4px 0 0 -12px; }
+  .company svg { height: 21px; }
+  .company svg { height: 18px; }
+  .thermal { clip-path: inset(0 0 calc(100% - var(--fold, 370px)) var(--sx)); }
+}
+@media (prefers-reduced-motion: reduce) { .company::after, .social a::after { transition: none; } }
+</style>
+</head>
+<body>
+<div class="stage">
+  <main class="layout">
+<!--content-->
+  </main>
+  <div class="layout thermal" aria-hidden="true" inert>
+<!--thermal-->
+  </div>
+  <input class="scan" type="range" min="0" max="1000" value="500" aria-label="Thermal view: move the line across the photo">
+</div>
+<script>
+(() => {
+  const root = document.documentElement, stage = document.querySelector('.stage'), scan = document.querySelector('.scan');
+  const img = document.querySelector('main .portrait img');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.classList.add('js');
+  let x = 0, target = 0, raf = 0, clipBands = [[0, 99999]];
+  const band = () => { const r = img.getBoundingClientRect(), s = stage.getBoundingClientRect(), w = Math.min(r.width, s.width); const c = r.left - s.left + r.width * .485; return [Math.max(8, c - w * .42), Math.min(s.width - 8, c + w * .42), c]; };
+  const draw = () => { stage.style.setProperty('--sx', x + 'px'); const W = stage.getBoundingClientRect().width; stage.style.setProperty('--clip', 'polygon(' + clipBands.map(([t, b]) => `${x}px ${t}px, ${W}px ${t}px, ${W}px ${b}px, ${x}px ${b}px, ${x}px ${t}px`).join(', ') + ')'); const [a, b] = band(); scan.style.left = (a - 14) + 'px'; scan.style.width = (b - a + 28) + 'px'; scan.value = Math.round((x - a) / (b - a) * 1000); };
+  const ease = () => { x += (target - x) * .22; if (Math.abs(target - x) < .5) x = target; draw(); if (x !== target) raf = requestAnimationFrame(ease); };
+  const go = (px, now) => { const [a, b] = band(); target = Math.max(a, Math.min(b, px)); cancelAnimationFrame(raf); if (now || reduce) { x = target; draw(); } else raf = requestAnimationFrame(ease); };
+  const fold = () => { const r = img.parentElement.getBoundingClientRect(), s = stage.getBoundingClientRect(), n = document.querySelector('main .name').getBoundingClientRect();
+    stage.style.setProperty('--fold', (r.bottom - s.top) + 'px');
+    clipBands = matchMedia('(max-width: 760px)').matches ? [[0, r.bottom - s.top]] : [[0, s.height]];
+    const phone = matchMedia('(max-width: 760px)').matches;
+    stage.style.setProperty('--handle-y', (phone ? r.bottom - s.top - 22 : r.bottom - s.top - 66) + 'px'); };
+  const park = (now) => { fold(); go(band()[2], now); };
+  const start = () => {
+    fold();
+    if (reduce) return park(true);
+    x = stage.getBoundingClientRect().width; draw(); park(false);  // a single sweep in from the right on arrival
+  };
+  img.complete ? start() : img.addEventListener('load', start);
+  addEventListener('resize', () => park(true));
+  addEventListener('pointermove', (e) => { if (e.pointerType !== 'mouse') return; const r = img.getBoundingClientRect(); if (e.clientY < r.top - 60 || e.clientX < r.left - 80 || e.clientX > r.right + 80) return; go(e.clientX - stage.getBoundingClientRect().left); });
+  const portrait = img.parentElement;
+  portrait.addEventListener('pointerdown', (e) => { portrait.setPointerCapture(e.pointerId); go(e.clientX - stage.getBoundingClientRect().left, true); });
+  portrait.addEventListener('pointermove', (e) => { if (e.pointerType !== 'mouse' && e.buttons) go(e.clientX - stage.getBoundingClientRect().left, true); });
+  scan.addEventListener('input', () => { const [a, b] = band(); go(a + (b - a) * scan.value / 1000, true); });
+})();
+</script>
+</body>
+</html>

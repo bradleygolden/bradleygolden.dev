@@ -1,24 +1,12 @@
 # bradleygolden.dev
 
-Personal site built with Astro 5 and Tailwind 4, styled from the provided mockup (without case studies or Substack sections) and ready for GitHub Pages.
+Bradley Golden's personal page: one static page, served by GitHub Pages from `site/` (merging to `main` deploys).
 
-## Quick start
+- `site/`: the website as served. `site/index.html` is built; don't edit it by hand.
+- `source/`: the page's source. `src.html` (layout, styles, script) and `content.html` (the words and links) become
+  `site/index.html` with `node source/tools/build.mjs`, run from the repo root. It inlines the logos from
+  `source/logos/` and makes the thermal copy of the page. `source/tools/THERMAL.md` says how the thermal photo was made.
+- `DESIGN.md`: the identity (colours, type, spacing and why), in Google's design.md format
+  (`npx @google/design.md lint DESIGN.md`).
 
-- Install dependencies: `npm install`
-- Start the dev server: `npm run dev` (default: http://localhost:4321)
-- Production build: `npm run build`
-
-## Deployment
-
-- GitHub Pages workflow lives at `.github/workflows/deploy.yml`. It builds the site and publishes the `dist/` artifact using the Pages deploy action.
-- `astro.config.mjs` is configured for `https://bradleygolden.dev` with `base: '/'` and `public/CNAME` present. If you change domains, update `astro.config.mjs`, `public/CNAME`, and rerun `npm run build`.
-
-## Notes
-
-- Global styles are in `src/styles/global.css`; the main page lives in `src/pages/index.astro` with a shared layout in `src/layouts/BaseLayout.astro`.
-- Contact CTA currently links to `bradley@recursivesystems.dev` and LinkedIn `https://www.linkedin.com/in/goldenbradley/`; adjust if needed.
-- Footer includes © 2025 Recursive Systems LLC.
-
-## License
-
-MIT License — see `LICENSE`.
+Preview: `node source/tools/build.mjs && python3 -m http.server -d site`.
