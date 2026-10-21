@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bradley Golden</title>
+<meta name="description" content="Bradley Golden runs a growth agency for independent residential HVAC companies. Founder of Recursive Systems in Highwood, Illinois.">
+<link rel="canonical" href="https://bradleygolden.dev/">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://bradleygolden.dev/">
+<meta property="og:site_name" content="Bradley Golden">
+<meta property="og:title" content="Bradley Golden">
+<meta property="og:description" content="Bradley Golden runs a growth agency for independent residential HVAC companies. Founder of Recursive Systems in Highwood, Illinois.">
+<meta property="og:image" content="https://bradleygolden.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bradley Golden">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#07051c">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://bradleygolden.dev/#person","name":"Bradley Golden","url":"https://bradleygolden.dev/","image":"https://bradleygolden.dev/bradley-800.webp","jobTitle":"Founder","description":"Bradley Golden runs a growth agency for independent residential HVAC companies. Founder of Recursive Systems in Highwood, Illinois.","worksFor":{"@type":"Organization","@id":"https://recursivesystems.dev/#organization","name":"Recursive Systems","url":"https://recursivesystems.dev/","sameAs":["https://www.youtube.com/@recursivesystems"]},"homeLocation":{"@type":"Place","name":"Highwood, Illinois"},"sameAs":["https://www.linkedin.com/in/goldenbradley/","https://www.instagram.com/bradleyatrecursive/"]}</script>
+<link rel="preload" href="funnel-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Funnel Display"; src: url(funnel-display-latin-wght-normal.woff2) format("woff2"); font-weight: 300 800; font-display: swap; }
+:root {
+  --paper: #f4f4f1;
+  --ink: #121212;
+  --soft: #4a4a47;
+  --night: #07051c;
+  --heat-ink: #ff9d45;
+  --hot: #e2420d;
+  --face: "Funnel Display", system-ui, sans-serif;
+  --gutter: clamp(20px, 4.4vw, 72px);
+  --sx: 50%;
+}
+* { box-sizing: border-box; margin: 0; }
+html { background: var(--paper); color: var(--ink); }
+body { font: 400 1rem/1.5 var(--face); }
+.stage { position: relative; isolation: isolate; }
+.layout { min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto 1fr auto; padding: clamp(28px, 3vw, 48px) var(--gutter) clamp(32px, 4vw, 56px); position: relative; }
+.layout > * { position: relative; z-index: 1; }
+
+/* The name splits at the seam: first name in daylight, last name as the camera sees it. Same rule at every width. */
+.name { grid-column: 1 / -1; grid-row: 1; display: grid; grid-template-columns: 1fr 1fr; column-gap: .24em; font-weight: 760; font-size: calc((50vw - var(--gutter)) / 3.66); line-height: .82; letter-spacing: -.028em; }
+.name span:first-child { justify-self: end; }
+.portrait { position: absolute; z-index: 0; left: 50%; bottom: 0; height: min(74svh, 72vw); transform: translateX(-48.5%); }
+.portrait img { display: block; height: 100%; width: auto; }
+/* Everything to read sits in daylight, in reading order. */
+.statement { grid-column: 1; grid-row: 2; margin-top: clamp(20px, 2.4vw, 40px); max-width: calc(50vw - var(--gutter) - 15vw); font-size: clamp(1.375rem, 1.95vw, 2.125rem); line-height: 1.1; letter-spacing: -.018em; font-weight: 500; line-height: 1.14; }
+.statement span { display: block; }
+.about { grid-column: 1; grid-row: 3; align-self: start; max-width: min(40ch, calc(50vw - var(--gutter) - 17vw)); margin-top: 20px; font-size: clamp(1rem, 1.1vw, 1.0625rem); line-height: 1.5; color: var(--soft); text-wrap: pretty; }
+/* Where to go next sits in the dark corner, which stays thermal wherever the seam is. */
+.links { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; display: flex; flex-direction: column; align-items: flex-end; margin-bottom: -6px; z-index: 2; color: #fff; }
+.links .social { margin: 0 -12px 0 0; }
+.links a { color: inherit; }
+.company { display: inline-flex; align-items: center; gap: 10px; height: 48px; position: relative; color: inherit; }
+.company svg { height: 28px; width: auto; display: block; }
+.company .out { height: 15px; }
+.links .social { margin-top: 6px; }
+.social { display: flex; margin-left: -12px; list-style: none; padding: 0; }
+.social a { display: grid; place-items: center; width: 48px; height: 48px; position: relative; }
+.social img, .social svg { display: block; width: auto; }
+.li img { height: 17px; } .ig svg { height: 19px; } .yt svg { height: 20px; }
+.company::after, .social a::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 6px; height: 2px; background: var(--hot); transform: scaleX(0); transform-origin: left; transition: transform .15s ease-out; }
+.company::after { left: 0; right: 0; bottom: 8px; }
+.company:hover::after, .company:focus-visible::after, .social a:hover::after, .social a:focus-visible::after { transform: scaleX(1); }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+
+/* The thermal copy of the same page, shown right of the seam. Paper and ink read as cold; the person reads as heat. */
+.thermal { position: absolute; inset: 0; background: var(--night); color: var(--heat-ink); pointer-events: none; z-index: 1; clip-path: inset(0 0 0 var(--sx)); }
+.js .thermal { clip-path: var(--clip); }
+.scan { position: absolute; z-index: 4; top: var(--handle-y, 50%); height: 44px; margin: 0; background: none; appearance: none; -webkit-appearance: none; cursor: ew-resize; }
+.scan::-webkit-slider-runnable-track { height: 44px; background: none; }
+.scan::-moz-range-track { height: 44px; background: none; }
+.scan::-webkit-slider-thumb { -webkit-appearance: none; width: 32px; height: 32px; margin-top: 6px; border-radius: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 11l-4 5 4 5M20 11l4 5-4 5' fill='none' stroke='%23f4f4f1' stroke-width='1.8'/%3E%3C/svg%3E") center / 32px 32px no-repeat, linear-gradient(90deg, var(--ink) 50%, var(--heat-ink) 50%); }
+.scan::-moz-range-thumb { width: 32px; height: 32px; border: 0; border-radius: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 11l-4 5 4 5M20 11l4 5-4 5' fill='none' stroke='%23f4f4f1' stroke-width='1.8'/%3E%3C/svg%3E") center / 32px 32px no-repeat, linear-gradient(90deg, var(--ink) 50%, var(--heat-ink) 50%); }
+.scan:focus-visible { outline: none; }
+.scan:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--hot); }
+.scan { display: none; } .js .scan { display: block; opacity: 0; } .js .scan:focus-visible { opacity: 1; }
+.js .portrait { cursor: ew-resize; touch-action: pan-y; }
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; grid-template-rows: auto auto auto auto 1fr; padding-top: 24px; padding-bottom: 0; }
+  .portrait { position: relative; grid-row: 2; left: auto; bottom: auto; transform: none; height: 300px; margin: 12px calc(var(--gutter) * -1) 0; overflow: hidden; }
+  .portrait img { position: absolute; top: 0; left: 50%; height: 350px; transform: translateX(-48.5%); }
+  .statement, .about, .links { grid-column: 1; max-width: none; }
+  .statement { grid-row: 3; margin-top: 26px; font-size: 1.625rem; text-wrap: balance; }
+  .statement span { display: inline; }
+  .about { grid-row: 4; margin-top: 16px; align-self: start; font-size: 1.125rem; }
+  /* The page ends where it began: in the dark field, with the ways to reach him. */
+  .links { grid-column: 1; grid-row: 5; justify-self: stretch; align-self: stretch; justify-content: flex-start; align-items: flex-start; margin: 32px calc(var(--gutter) * -1) 0; padding: 22px var(--gutter) 30px; background: var(--night); color: #fff; }
+  .links .social { margin: 4px 0 0 -12px; }
+  .company svg { height: 21px; }
+  .company svg { height: 18px; }
+  .thermal { clip-path: inset(0 0 calc(100% - var(--fold, 370px)) var(--sx)); }
+}
+@media (prefers-reduced-motion: reduce) { .company::after, .social a::after { transition: none; } }
+</style>
+</head>
+<body>
+<div class="stage">
+  <main class="layout">
+<h1 class="name"><span>Bradley</span> <span>Golden</span></h1>
+<div class="portrait"><img src="bradley-800.webp" srcset="bradley-480.webp 480w, bradley-800.webp 800w" sizes="(max-width: 760px) 330px, 620px" width="800" height="1163" alt="Bradley Golden in a black cap and T-shirt, arms crossed"></div>
+<p class="statement"><span>I run a growth agency</span> <span>for independent residential</span> <span>HVAC companies.</span></p>
+<p class="about">I founded Recursive Systems in Highwood, Illinois. I want to help businesses use AI and other software tools to benefit their business. I've worked in software for over a decade, and before that I served in the military.</p>
+<div class="links">
+  <a class="company" href="https://recursivesystems.dev/?utm_source=bradleygolden_dev&amp;utm_medium=website" aria-label="Recursive Systems"><svg viewBox="58 53 284 31" fill="currentColor" aria-hidden="true" focusable="false"><path transform="translate(56 51) scale(1.05)" d="M2 30V2h28v5H7v23zm9-2V11h17v5H16v12zm9-1v-7h7v4h-3v3z"/><g transform="translate(107 78) scale(0.027 -0.027)"><path transform="translate(0 0)" d="M81 0V686H442Q515 686 563 660Q611 634 635 588Q659 541 659 479Q659 410 628 359Q597 308 540 284L683 0H561L431 265H193V0ZM193 359H433Q487 359 517 391Q546 423 546 480Q546 515 533 539Q520 564 495 577Q470 590 433 590H193Z"/><path transform="translate(722 0)" d="M285 -12Q204 -12 149 18Q95 47 67 108Q39 169 39 263Q39 358 67 418Q95 479 150 508Q205 538 287 538Q362 538 412 509Q463 481 489 423Q515 365 515 277V237H146Q148 181 163 143Q178 106 208 89Q239 71 286 71Q315 71 338 79Q361 86 377 100Q393 115 402 135Q411 156 411 182H513Q513 135 497 99Q481 63 451 39Q420 14 378 1Q336 -12 285 -12ZM148 313H406Q406 352 398 378Q389 405 373 422Q357 439 335 447Q313 454 285 454Q243 454 213 439Q184 424 168 393Q152 361 148 313Z"/><path transform="translate(1276 0)" d="M276 -12Q197 -12 144 18Q91 47 65 108Q38 169 38 263Q38 357 65 418Q92 478 145 508Q199 538 277 538Q331 538 371 525Q411 511 439 484Q467 458 480 419Q494 380 494 330H389Q389 372 377 399Q365 426 340 439Q315 453 275 453Q233 453 204 433Q175 414 160 374Q145 335 145 271V254Q145 193 159 153Q174 112 204 93Q233 73 279 73Q319 73 344 88Q368 102 381 130Q393 157 393 196H494Q494 149 480 111Q467 73 439 45Q412 18 371 3Q330 -12 276 -12Z"/><path transform="translate(1808 0)" d="M232 -12Q156 -12 109 28Q62 69 62 167V526H166V183Q166 153 174 133Q181 113 195 101Q209 89 228 84Q247 79 270 79Q306 79 336 97Q365 114 383 145Q401 177 401 218V526H505V0H420L411 75H404Q385 46 359 27Q333 8 302 -2Q270 -12 232 -12Z"/><path transform="translate(2380 0)" d="M67 0V526H153L162 441H168Q177 466 192 488Q206 510 229 524Q253 538 287 538Q303 538 316 535Q328 532 335 530V432H300Q268 432 243 422Q219 412 203 393Q186 373 179 345Q171 317 171 282V0Z"/><path transform="translate(2726 0)" d="M261 -12Q206 -12 164 0Q122 12 94 33Q66 54 51 84Q37 113 37 149Q37 154 38 158Q38 162 38 165H141Q141 162 141 159Q141 157 141 154Q141 123 158 105Q175 86 204 79Q232 71 266 71Q296 71 322 78Q347 86 364 101Q380 116 380 139Q380 169 359 185Q338 201 304 210Q270 220 233 231Q200 240 168 250Q135 261 109 278Q83 295 67 321Q51 347 51 386Q51 423 67 451Q83 479 111 498Q140 517 179 527Q219 537 266 537Q315 537 353 527Q391 516 418 497Q444 478 458 451Q472 425 472 395Q472 389 471 382Q471 376 471 374H369V383Q369 403 358 419Q347 435 324 445Q300 455 261 455Q235 455 215 450Q195 446 182 438Q169 430 163 419Q156 408 156 394Q156 371 172 359Q189 346 216 338Q243 329 274 319Q310 309 347 299Q384 288 416 272Q447 256 466 228Q486 200 486 153Q486 110 469 78Q452 46 422 26Q391 7 350 -3Q309 -12 261 -12Z"/><path transform="translate(3250 0)" d="M67 617V723H171V617ZM67 0V526H171V0Z"/><path transform="translate(3488 0)" d="M204 0 9 526H118L209 275Q215 257 224 229Q233 200 242 170Q251 140 258 116H263Q269 139 278 169Q286 198 295 227Q304 256 311 275L401 526H507L311 0Z"/><path transform="translate(4004 0)" d="M285 -12Q204 -12 149 18Q95 47 67 108Q39 169 39 263Q39 358 67 418Q95 479 150 508Q205 538 287 538Q362 538 412 509Q463 481 489 423Q515 365 515 277V237H146Q148 181 163 143Q178 106 208 89Q239 71 286 71Q315 71 338 79Q361 86 377 100Q393 115 402 135Q411 156 411 182H513Q513 135 497 99Q481 63 451 39Q420 14 378 1Q336 -12 285 -12ZM148 313H406Q406 352 398 378Q389 405 373 422Q357 439 335 447Q313 454 285 454Q243 454 213 439Q184 424 168 393Q152 361 148 313Z"/><path transform="translate(4558 0)" d=""/><path transform="translate(4763 0)" d="M335 -12Q279 -12 227 0Q175 11 135 37Q95 62 72 102Q49 141 49 196Q49 202 49 207Q50 213 50 217H162Q162 214 162 208Q161 202 161 198Q161 161 183 135Q205 109 244 96Q284 83 335 83Q363 83 389 86Q415 90 437 97Q458 105 474 117Q490 128 499 144Q508 160 508 181Q508 213 489 234Q471 255 439 269Q408 283 368 294Q329 305 287 316Q245 327 205 342Q166 357 134 378Q103 400 84 432Q66 465 66 512Q66 557 85 592Q104 627 140 651Q176 674 226 686Q276 698 339 698Q393 698 441 687Q489 675 525 651Q561 627 582 590Q602 553 602 502V490H491V503Q491 535 472 557Q453 579 419 591Q385 603 340 603Q287 603 251 593Q215 582 197 563Q178 545 178 519Q178 490 197 472Q216 453 247 440Q279 427 318 416Q358 406 399 394Q441 383 481 368Q520 353 552 331Q583 309 602 276Q621 244 621 197Q621 123 584 76Q547 30 483 9Q418 -12 335 -12Z"/><path transform="translate(5433 0)" d="M124 -182Q94 -182 74 -178Q54 -173 49 -172V-97H99Q121 -97 143 -87Q166 -77 184 -55Q202 -33 214 0L9 526H118L220 264Q227 246 235 219Q244 192 253 164Q261 136 267 114H272Q277 129 282 149Q288 168 294 189Q300 210 306 229Q312 249 316 263L401 526H507L329 20Q314 -22 296 -59Q278 -96 255 -124Q231 -151 199 -167Q167 -182 124 -182Z"/><path transform="translate(5949 0)" d="M261 -12Q206 -12 164 0Q122 12 94 33Q66 54 51 84Q37 113 37 149Q37 154 38 158Q38 162 38 165H141Q141 162 141 159Q141 157 141 154Q141 123 158 105Q175 86 204 79Q232 71 266 71Q296 71 322 78Q347 86 364 101Q380 116 380 139Q380 169 359 185Q338 201 304 210Q270 220 233 231Q200 240 168 250Q135 261 109 278Q83 295 67 321Q51 347 51 386Q51 423 67 451Q83 479 111 498Q140 517 179 527Q219 537 266 537Q315 537 353 527Q391 516 418 497Q444 478 458 451Q472 425 472 395Q472 389 471 382Q471 376 471 374H369V383Q369 403 358 419Q347 435 324 445Q300 455 261 455Q235 455 215 450Q195 446 182 438Q169 430 163 419Q156 408 156 394Q156 371 172 359Q189 346 216 338Q243 329 274 319Q310 309 347 299Q384 288 416 272Q447 256 466 228Q486 200 486 153Q486 110 469 78Q452 46 422 26Q391 7 350 -3Q309 -12 261 -12Z"/><path transform="translate(6473 0)" d="M198 -12Q153 -12 127 5Q102 23 91 50Q81 78 81 109V440H15V526H83L102 673H185V526H280V440H185V121Q185 98 195 86Q205 74 228 74H280V4Q270 0 256 -4Q241 -7 226 -10Q211 -12 198 -12Z"/><path transform="translate(6778 0)" d="M285 -12Q204 -12 149 18Q95 47 67 108Q39 169 39 263Q39 358 67 418Q95 479 150 508Q205 538 287 538Q362 538 412 509Q463 481 489 423Q515 365 515 277V237H146Q148 181 163 143Q178 106 208 89Q239 71 286 71Q315 71 338 79Q361 86 377 100Q393 115 402 135Q411 156 411 182H513Q513 135 497 99Q481 63 451 39Q420 14 378 1Q336 -12 285 -12ZM148 313H406Q406 352 398 378Q389 405 373 422Q357 439 335 447Q313 454 285 454Q243 454 213 439Q184 424 168 393Q152 361 148 313Z"/><path transform="translate(7332 0)" d="M67 0V526H153L162 451H169Q187 480 211 499Q234 518 264 528Q293 538 327 538Q376 538 413 518Q449 498 468 451H475Q493 479 517 498Q541 518 572 528Q602 538 637 538Q684 538 720 521Q756 505 777 466Q798 428 798 364V0H694V345Q694 375 687 395Q680 414 668 425Q656 437 639 442Q622 447 602 447Q569 447 543 429Q517 412 501 381Q485 350 485 308V0H381V345Q381 375 374 395Q367 414 355 425Q343 437 326 442Q309 447 290 447Q257 447 230 429Q203 412 187 381Q171 350 171 308V0Z"/><path transform="translate(8192 0)" d="M261 -12Q206 -12 164 0Q122 12 94 33Q66 54 51 84Q37 113 37 149Q37 154 38 158Q38 162 38 165H141Q141 162 141 159Q141 157 141 154Q141 123 158 105Q175 86 204 79Q232 71 266 71Q296 71 322 78Q347 86 364 101Q380 116 380 139Q380 169 359 185Q338 201 304 210Q270 220 233 231Q200 240 168 250Q135 261 109 278Q83 295 67 321Q51 347 51 386Q51 423 67 451Q83 479 111 498Q140 517 179 527Q219 537 266 537Q315 537 353 527Q391 516 418 497Q444 478 458 451Q472 425 472 395Q472 389 471 382Q471 376 471 374H369V383Q369 403 358 419Q347 435 324 445Q300 455 261 455Q235 455 215 450Q195 446 182 438Q169 430 163 419Q156 408 156 394Q156 371 172 359Q189 346 216 338Q243 329 274 319Q310 309 347 299Q384 288 416 272Q447 256 466 228Q486 200 486 153Q486 110 469 78Q452 46 422 26Q391 7 350 -3Q309 -12 261 -12Z"/></g></svg><svg class="out" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M3 11 11 3M4.5 3H11v6.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+  <ul class="social" aria-label="Social">
+    <li><a class="li" href="https://www.linkedin.com/in/goldenbradley/" aria-label="LinkedIn"><img src="logos/linkedin-inbug-white.webp" width="138" height="128" alt=""></a></li>
+    <li><a class="ig" href="https://www.instagram.com/bradleyatrecursive/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a></li>
+    <li><a class="yt" href="https://www.youtube.com/@recursivesystems" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a></li>
+  </ul>
+</div>
+
+  </main>
+  <div class="layout thermal" aria-hidden="true" inert>
+<div class="name"><span>Bradley</span> <span>Golden</span></div>
+<div class="portrait"><img src="bradley-thermal-800.webp" srcset="bradley-thermal-480.webp 480w, bradley-thermal-800.webp 800w" sizes="(max-width: 760px) 330px, 620px" width="800" height="1163" alt=""></div>
+
+
+
+
+  </div>
+  <input class="scan" type="range" min="0" max="1000" value="500" aria-label="Thermal view: move the line across the photo">
+</div>
+<script>
+(() => {
+  const root = document.documentElement, stage = document.querySelector('.stage'), scan = document.querySelector('.scan');
+  const img = document.querySelector('main .portrait img');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.classList.add('js');
+  let x = 0, target = 0, raf = 0, clipBands = [[0, 99999]];
+  const band = () => { const r = img.getBoundingClientRect(), s = stage.getBoundingClientRect(), w = Math.min(r.width, s.width); const c = r.left - s.left + r.width * .485; return [Math.max(8, c - w * .42), Math.min(s.width - 8, c + w * .42), c]; };
+  const draw = () => { stage.style.setProperty('--sx', x + 'px'); const W = stage.getBoundingClientRect().width; stage.style.setProperty('--clip', 'polygon(' + clipBands.map(([t, b]) => `${x}px ${t}px, ${W}px ${t}px, ${W}px ${b}px, ${x}px ${b}px, ${x}px ${t}px`).join(', ') + ')'); const [a, b] = band(); scan.style.left = (a - 14) + 'px'; scan.style.width = (b - a + 28) + 'px'; scan.value = Math.round((x - a) / (b - a) * 1000); };
+  const ease = () => { x += (target - x) * .22; if (Math.abs(target - x) < .5) x = target; draw(); if (x !== target) raf = requestAnimationFrame(ease); };
+  const go = (px, now) => { const [a, b] = band(); target = Math.max(a, Math.min(b, px)); cancelAnimationFrame(raf); if (now || reduce) { x = target; draw(); } else raf = requestAnimationFrame(ease); };
+  const fold = () => { const r = img.parentElement.getBoundingClientRect(), s = stage.getBoundingClientRect(), n = document.querySelector('main .name').getBoundingClientRect();
+    stage.style.setProperty('--fold', (r.bottom - s.top) + 'px');
+    clipBands = matchMedia('(max-width: 760px)').matches ? [[0, r.bottom - s.top]] : [[0, s.height]];
+    const phone = matchMedia('(max-width: 760px)').matches;
+    stage.style.setProperty('--handle-y', (phone ? r.bottom - s.top - 22 : r.bottom - s.top - 66) + 'px'); };
+  const park = (now) => { fold(); go(band()[2], now); };
+  const start = () => {
+    fold();
+    if (reduce) return park(true);
+    x = stage.getBoundingClientRect().width; draw(); park(false);  // a single sweep in from the right on arrival
+  };
+  img.complete ? start() : img.addEventListener('load', start);
+  addEventListener('resize', () => park(true));
+  addEventListener('pointermove', (e) => { if (e.pointerType !== 'mouse') return; const r = img.getBoundingClientRect(); if (e.clientY < r.top - 60 || e.clientX < r.left - 80 || e.clientX > r.right + 80) return; go(e.clientX - stage.getBoundingClientRect().left); });
+  const portrait = img.parentElement;
+  portrait.addEventListener('pointerdown', (e) => { portrait.setPointerCapture(e.pointerId); go(e.clientX - stage.getBoundingClientRect().left, true); });
+  portrait.addEventListener('pointermove', (e) => { if (e.pointerType !== 'mouse' && e.buttons) go(e.clientX - stage.getBoundingClientRect().left, true); });
+  scan.addEventListener('input', () => { const [a, b] = band(); go(a + (b - a) * scan.value / 1000, true); });
+})();
+</script>
+</body>
+</html>
